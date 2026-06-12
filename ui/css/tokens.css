@@ -1,0 +1,70 @@
+/* ARB UI — design tokens */
+
+:root {
+  /* Brand */
+  --arb-primary:       #002b68;
+  --arb-primary-dark:  #001d4a;
+  --arb-primary-light: #003d8f;
+
+  /* Backgrounds */
+  --arb-bg-base:       #f5f5f7;
+  --arb-bg-surface:    #ffffff;
+  --arb-bg-subtle:     #fafafa;
+  --arb-bg-glass:      rgba(255, 255, 255, 0.7);
+  --arb-bg-overlay:    rgba(0, 0, 0, 0.05);
+
+  /* Text */
+  --arb-text-primary:   #1d1d1f;
+  --arb-text-secondary: #86868b;
+  --arb-text-tertiary:  #aeaeb2;
+  --arb-text-inverse:   #ffffff;
+
+  /* Borders */
+  --arb-border:       rgba(0, 0, 0, 0.10);
+  --arb-border-light: rgba(0, 0, 0, 0.05);
+
+  /* Shadows */
+  --arb-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --arb-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --arb-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10);
+
+  /* Radius */
+  --arb-radius-sm: 8px;
+  --arb-radius-md: 12px;
+  --arb-radius-lg: 16px;
+
+  /* Motion */
+  --arb-transition:      250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --arb-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Status colours */
+  --arb-color-success: #1a7f4b;
+  --arb-color-warning: #8a6000;
+  --arb-color-danger:  #b91c1c;
+  --arb-color-info:    #0369a1;
+  --arb-bg-success:    rgba(26, 127, 75, 0.10);
+  --arb-bg-warning:    rgba(138, 96, 0, 0.10);
+  --arb-bg-danger:     rgba(185, 28, 28, 0.10);
+  --arb-bg-info:       rgba(3, 105, 161, 0.10);
+}
+
+/* Dark mode — opt-in via .arb-dark on any ancestor */
+.arb-dark {
+  --arb-primary:       #3b6fa8;
+  --arb-primary-dark:  #2a5a8f;
+  --arb-primary-light: #4d82be;
+
+  --arb-bg-base:       #1e1e23;
+  --arb-bg-surface:    #2a2a30;
+  --arb-bg-subtle:     #252530;
+  --arb-bg-glass:      rgba(42, 42, 48, 0.85);
+  --arb-bg-overlay:    rgba(255, 255, 255, 0.08);
+
+  --arb-text-primary:   #f0f0f2;
+  --arb-text-secondary: #c0c0c5;
+  --arb-text-tertiary:  #88888f;
+  --arb-text-inverse:   #ffffff;
+
+  --arb-border:       rgba(255, 255, 255, 0.20);
+  --arb-border-light: rgba(255, 255, 255, 0.12);
+}

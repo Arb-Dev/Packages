@@ -1,0 +1,31 @@
+{
+  "name": "@arb/ui",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css": "./css/index.css",
+    "./css/tokens": "./css/tokens.css",
+    "./css/layout": "./css/layout.css",
+    "./css/components": "./css/components.css"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.400",
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "typescript": "^5.6.3"
+  }
+}
