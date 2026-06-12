@@ -1,0 +1,13 @@
+{
+  "name": "arb-packages",
+  "private": true,
+  "workspaces": [
+    "core",
+    "db",
+    "ui"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=core --workspace=db --workspace=ui",
+    "test": "npm run test --workspaces --if-present"
+  }
+}

@@ -1,9 +1,17 @@
 {
-  "name": "@arb/ui",
+  "name": "@arb-dev/ui",
   "version": "1.0.0",
-  "private": true,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["dist", "css"],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arb-Dev/packages.git",
+    "directory": "ui"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",
