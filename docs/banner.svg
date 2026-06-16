@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3178C6"/>
+      <stop offset="50%" style="stop-color:#6e40c9"/>
+      <stop offset="100%" style="stop-color:#238636"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bg)" rx="12"/>
+
+  <!-- Accent bar -->
+  <rect x="0" y="0" width="800" height="3" fill="url(#accent)" rx="12"/>
+
+  <!-- Package pill labels -->
+  <rect x="180" y="56" width="118" height="28" rx="6" fill="#1f2937" stroke="#3178C6" stroke-width="1"/>
+  <text x="239" y="75" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#3178C6" text-anchor="middle">@arb-dev/core</text>
+
+  <rect x="316" y="56" width="108" height="28" rx="6" fill="#1f2937" stroke="#6e40c9" stroke-width="1"/>
+  <text x="370" y="75" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#a78bfa" text-anchor="middle">@arb-dev/db</text>
+
+  <rect x="442" y="56" width="108" height="28" rx="6" fill="#1f2937" stroke="#238636" stroke-width="1"/>
+  <text x="496" y="75" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#3fb950" text-anchor="middle">@arb-dev/ui</text>
+
+  <!-- Main title -->
+  <text x="400" y="130" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="32" font-weight="700" fill="#e6edf3" text-anchor="middle" letter-spacing="-0.5">arb-dev packages</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="162" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="14" fill="#8b949e" text-anchor="middle">Shared libraries for the ARB Platform</text>
+</svg>
