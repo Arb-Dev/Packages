@@ -6,14 +6,54 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  packages: write
 
 name: release-please
 
 jobs:
   release-please:
     runs-on: ubuntu-latest
+    outputs:
+      core_released: ${{ steps.release.outputs.core--release_created }}
+      db_released: ${{ steps.release.outputs.db--release_created }}
+      ui_released: ${{ steps.release.outputs.ui--release_created }}
     steps:
       - uses: googleapis/release-please-action@v4
+        id: release
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+
+  publish:
+    needs: release-please
+    if: needs.release-please.outputs.core_released == 'true' || needs.release-please.outputs.db_released == 'true' || needs.release-please.outputs.ui_released == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Publish core
+        if: needs.release-please.outputs.core_released == 'true'
+        run: npm publish --workspace=core
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish db
+        if: needs.release-please.outputs.db_released == 'true'
+        run: npm publish --workspace=db
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish ui
+        if: needs.release-please.outputs.ui_released == 'true'
+        run: npm publish --workspace=ui
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

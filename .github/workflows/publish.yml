@@ -1,42 +1,11 @@
+# Publishing is handled in release-please.yml using release-please action outputs.
+# This file is intentionally empty — GitHub requires a valid workflow file,
+# so it is kept as a no-op rather than deleted to preserve the badge URL in the README.
 name: Publish packages
-
 on:
-  release:
-    types: [published]
-
-permissions:
-  contents: read
-  packages: write
-
+  workflow_dispatch:
 jobs:
-  publish:
+  noop:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          registry-url: https://npm.pkg.github.com
-
-      - run: npm ci
-
-      - run: npm run build
-
-      - name: Publish core
-        if: startsWith(github.event.release.tag_name, 'core-v')
-        run: npm publish --workspace=core
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish db
-        if: startsWith(github.event.release.tag_name, 'db-v')
-        run: npm publish --workspace=db
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Publish ui
-        if: startsWith(github.event.release.tag_name, 'ui-v')
-        run: npm publish --workspace=ui
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: echo "Publishing is triggered via release-please.yml"
