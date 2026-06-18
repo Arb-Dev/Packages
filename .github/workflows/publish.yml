@@ -1,8 +1,8 @@
 name: Publish packages
 
 on:
-  push:
-    branches: [main]
+  release:
+    types: [published]
 
 permissions:
   contents: read
@@ -23,14 +23,20 @@ jobs:
 
       - run: npm run build
 
-      - run: npm publish --workspace=core
+      - name: Publish core
+        if: startsWith(github.event.release.tag_name, 'core-v')
+        run: npm publish --workspace=core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm publish --workspace=db
+      - name: Publish db
+        if: startsWith(github.event.release.tag_name, 'db-v')
+        run: npm publish --workspace=db
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: npm publish --workspace=ui
+      - name: Publish ui
+        if: startsWith(github.event.release.tag_name, 'ui-v')
+        run: npm publish --workspace=ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
