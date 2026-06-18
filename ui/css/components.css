@@ -312,6 +312,70 @@
   font-size: 13px;
 }
 
+/* ── Table ─────────────────────────────────────────────────────────────────── */
+
+.arb-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.arb-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.arb-thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--arb-bg-glass);
+  backdrop-filter: blur(12px) saturate(160%);
+}
+
+.arb-th {
+  padding: 10px 16px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--arb-text-tertiary);
+  border-bottom: 1px solid var(--arb-border-light);
+  white-space: nowrap;
+}
+
+.arb-td {
+  padding: 9px 16px;
+  border-bottom: 1px solid var(--arb-border-light);
+  color: var(--arb-text-primary);
+  vertical-align: middle;
+}
+
+.arb-tbody .arb-tr:last-child .arb-td { border-bottom: none; }
+
+.arb-tbody .arb-tr:hover .arb-td { background: var(--arb-bg-overlay); }
+
+.arb-tr-clickable { cursor: pointer; }
+
+.arb-td-dim {
+  font-size: 12px;
+  color: var(--arb-text-secondary);
+}
+
+.arb-td-mono {
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}
+
+.arb-cell-stack-title { font-weight: 500; }
+
+.arb-cell-stack-sub {
+  font-size: 12px;
+  color: var(--arb-text-secondary);
+  margin-top: 2px;
+}
+
 /* ── Spinner ───────────────────────────────────────────────────────────────── */
 
 @keyframes arb-spin { to { transform: rotate(360deg); } }

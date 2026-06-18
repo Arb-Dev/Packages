@@ -13,6 +13,9 @@ export type { PageContentProps } from './components/PageContent'
 export { PortalLayout } from './components/PortalLayout'
 export type { PortalLayoutProps, PortalLayoutNavItem, PortalLayoutNavSection } from './components/PortalLayout'
 
+export { Table, Thead, Tbody, Tr, Th, Td, CellStack } from './components/Table'
+export type { TableProps, TheadProps, TbodyProps, TrProps, ThProps, TdProps, CellStackProps } from './components/Table'
+
 export { Button } from './components/Button'
 export type { ButtonProps, ButtonVariant, ButtonSize } from './components/Button'
 
