@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "files": ["dist", "css"],
+  "files": [
+    "dist",
+    "css"
+  ],
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
@@ -26,14 +29,22 @@
   },
   "scripts": {
     "build": "tsc",
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "lucide-react": ">=0.400",
     "react": ">=18"
   },
   "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/react-vite": "^10.4.6",
     "@types/react": "^19",
-    "typescript": "^5.6.3"
+    "@vitejs/plugin-react": "^6.0.2",
+    "lucide-react": "^1.21.0",
+    "storybook": "^10.4.6",
+    "typescript": "^5.6.3",
+    "vite": "^8.0.16"
   }
 }

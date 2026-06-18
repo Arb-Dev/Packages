@@ -13,6 +13,7 @@
 <br/>
 
 [![Publish](https://github.com/Arb-Dev/Packages/actions/workflows/publish.yml/badge.svg)](https://github.com/Arb-Dev/Packages/actions/workflows/publish.yml)
+[![Storybook](https://github.com/Arb-Dev/Packages/actions/workflows/storybook.yml/badge.svg)](https://arb-dev.github.io/Packages)
 [![Release](https://img.shields.io/github/v/release/Arb-Dev/Packages?label=version&color=blue)](https://github.com/Arb-Dev/Packages/releases)
 ![Node](https://img.shields.io/badge/Node.js-20-339933?logo=nodedotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
@@ -94,7 +95,8 @@ dependency.
 
 ### `@arb-dev/ui`
 
-React component library with a matching CSS layer. Components are plain
+React component library with a matching CSS layer. Browse all components at
+**[arb-dev.github.io/Packages](https://arb-dev.github.io/Packages)** (deployed automatically from `main`). Components are plain
 TypeScript/React (no CSS-in-JS) — styles come from the CSS exports.
 
 **Components:** `PortalLayout`, `Button`, `Badge`, `DataPanel`, `Field`,
