@@ -12,7 +12,7 @@
 
 <br/>
 
-[![Publish](https://github.com/Arb-Dev/Packages/actions/workflows/publish.yml/badge.svg)](https://github.com/Arb-Dev/Packages/actions/workflows/publish.yml)
+[![Publish](https://github.com/Arb-Dev/Packages/actions/workflows/release-please.yml/badge.svg)](https://github.com/Arb-Dev/Packages/actions/workflows/release-please.yml)
 [![Storybook](https://github.com/Arb-Dev/Packages/actions/workflows/storybook.yml/badge.svg)](https://arb-dev.github.io/Packages)
 [![Release](https://img.shields.io/github/v/release/Arb-Dev/Packages?label=version&color=blue)](https://github.com/Arb-Dev/Packages/releases)
 ![Node](https://img.shields.io/badge/Node.js-20-339933?logo=nodedotjs&logoColor=white)
