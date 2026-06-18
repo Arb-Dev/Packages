@@ -5,7 +5,7 @@ import { Button } from '../components/Button'
 import { Badge } from '../components/Badge'
 
 const meta: Meta<typeof PortalLayout> = {
-  title: 'Components/PortalLayout',
+  title: 'Layout/PortalLayout',
   component: PortalLayout,
   parameters: {
     layout: 'fullscreen',
