@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/Arb-Dev/Packages/compare/ui-v1.2.0...ui-v1.3.0) (2026-06-18)
+
+
+### Features
+
+* table ([#13](https://github.com/Arb-Dev/Packages/issues/13)) ([d9702f4](https://github.com/Arb-Dev/Packages/commit/d9702f4c0cfdd6a15cec6e46ce928f44bc27842c))
+
 ## [1.2.0](https://github.com/Arb-Dev/Packages/compare/ui-v1.1.0...ui-v1.2.0) (2026-06-18)
 
 
