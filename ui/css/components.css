@@ -393,3 +393,116 @@
 
 .arb-spinner-sm { width: 14px; height: 14px; }
 .arb-spinner-lg { width: 28px; height: 28px; border-width: 3px; }
+
+/* ── App launcher (waffle menu) ────────────────────────────────────────────── */
+
+.arb-applauncher {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+/* Trigger lives on the dark navbar, so it mirrors .arb-navbar-action. */
+.arb-applauncher-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: var(--arb-radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--arb-text-inverse);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background var(--arb-transition-fast), border-color var(--arb-transition-fast);
+}
+
+.arb-applauncher-trigger:hover,
+.arb-applauncher-trigger[aria-expanded='true'] {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.arb-applauncher-panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 200;
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  padding: 16px;
+  background: var(--arb-bg-surface);
+  border: 1px solid var(--arb-border-light);
+  border-radius: var(--arb-radius-lg);
+  box-shadow: var(--arb-shadow-lg);
+}
+
+.arb-applauncher-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--arb-text-secondary);
+}
+
+.arb-applauncher-empty {
+  margin: 0;
+  padding: 8px 0;
+  font-size: 13px;
+  color: var(--arb-text-secondary);
+}
+
+.arb-applauncher-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.arb-applauncher-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 6px;
+  border-radius: var(--arb-radius-md);
+  text-decoration: none;
+  color: var(--arb-text-primary);
+  text-align: center;
+  transition: background var(--arb-transition-fast);
+}
+
+.arb-applauncher-item:hover {
+  background: var(--arb-bg-overlay);
+}
+
+.arb-applauncher-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--arb-radius-md);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.arb-applauncher-icon-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.arb-applauncher-name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}

@@ -99,8 +99,13 @@ React component library with a matching CSS layer. Browse all components at
 **[arb-dev.github.io/Packages](https://arb-dev.github.io/Packages)** (deployed automatically from `main`). Components are plain
 TypeScript/React (no CSS-in-JS) — styles come from the CSS exports.
 
-**Components:** `PortalLayout`, `Button`, `Badge`, `DataPanel`, `Field`,
-`Input`, `Select`, `Spinner`, `EmptyState`.
+**Components:** `PortalLayout`, `Navbar`, `AppLauncher`, `Button`, `Badge`,
+`DataPanel`, `Field`, `Input`, `Select`, `Spinner`, `EmptyState`.
+
+The `Navbar` (and `PortalLayout`) accept a `homeHref` — which renders a
+home-icon brand link back to the platform home — and an `apps` array that
+powers a waffle **app launcher** for cross-app navigation. `apps` mirrors the
+portal `/portal/apps` shape: `{ subdomain, name, url, iconUrl? }`.
 
 **CSS exports** (from `package.json` `exports`):
 

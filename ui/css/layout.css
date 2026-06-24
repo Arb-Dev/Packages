@@ -33,6 +33,29 @@
   min-width: 0;
 }
 
+/* Brand becomes a home link when `homeHref` is set. */
+.arb-navbar-home {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 4px 8px;
+  margin: 0 -8px;
+  border-radius: var(--arb-radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: background var(--arb-transition-fast);
+}
+
+.arb-navbar-home:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.arb-navbar-home-icon {
+  color: var(--arb-text-inverse);
+  flex-shrink: 0;
+}
+
 .arb-navbar-logo {
   height: 32px;
   width: auto;

@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import type { LucideIcon } from 'lucide-react'
 import { AppShell } from './AppShell'
 import { Navbar } from './Navbar'
+import type { AppLauncherItem } from './AppLauncher'
 import { Sidebar, NavSection, NavItem } from './Sidebar'
 
 export interface PortalLayoutNavItem {
@@ -21,6 +22,10 @@ export interface PortalLayoutNavSection {
 export interface PortalLayoutProps {
   title?: string
   logoSrc?: string
+  /** Link target for the brand/home affordance (the platform home). */
+  homeHref?: string
+  /** Apps for the waffle app-launcher menu in the navbar. */
+  apps?: AppLauncherItem[]
   userName?: string
   userDetail?: string
   sections: PortalLayoutNavSection[]
@@ -32,6 +37,8 @@ export interface PortalLayoutProps {
 export function PortalLayout({
   title,
   logoSrc,
+  homeHref,
+  apps,
   userName,
   userDetail,
   sections,
@@ -45,6 +52,8 @@ export function PortalLayout({
         <Navbar
           title={title}
           logoSrc={logoSrc}
+          homeHref={homeHref}
+          apps={apps}
           userName={userName}
           userDetail={userDetail}
           onLogout={onLogout}
