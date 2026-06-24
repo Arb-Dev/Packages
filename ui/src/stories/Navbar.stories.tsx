@@ -39,3 +39,21 @@ export const WithEndSlot: Story = {
     ),
   },
 }
+
+export const WithHomeAndLauncher: Story = {
+  args: {
+    title: 'Tasks',
+    homeHref: '#home',
+    userName: 'Jane Smith',
+    userDetail: 'Admin',
+    onLogout: () => {},
+    apps: [
+      { subdomain: 'tasks', name: 'Task assignment', url: '#tasks' },
+      { subdomain: 'crm', name: 'Customer records', url: '#crm' },
+      { subdomain: 'documents', name: 'Document store', url: '#documents' },
+      { subdomain: 'automations', name: 'Workflow automations', url: '#automations' },
+      { subdomain: 'forms', name: 'Form builder', url: '#forms' },
+      { subdomain: 'users', name: 'User directory', url: '#users' },
+    ],
+  },
+}

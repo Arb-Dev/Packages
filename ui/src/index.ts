@@ -4,6 +4,9 @@ export type { AppShellProps } from './components/AppShell'
 export { Navbar } from './components/Navbar'
 export type { NavbarProps } from './components/Navbar'
 
+export { AppLauncher } from './components/AppLauncher'
+export type { AppLauncherProps, AppLauncherItem } from './components/AppLauncher'
+
 export { Sidebar, NavSection, NavItem } from './components/Sidebar'
 export type { SidebarProps, NavSectionProps, NavItemProps } from './components/Sidebar'
 
