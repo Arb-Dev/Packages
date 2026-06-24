@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/Arb-Dev/Packages/compare/ui-v1.3.0...ui-v1.4.0) (2026-06-24)
+
+
+### Features
+
+* waffle menu and branding ([#15](https://github.com/Arb-Dev/Packages/issues/15)) ([e42a77d](https://github.com/Arb-Dev/Packages/commit/e42a77df53573d0594f74113f3a199c6ac8e17a6))
+
 ## [1.3.0](https://github.com/Arb-Dev/Packages/compare/ui-v1.2.0...ui-v1.3.0) (2026-06-18)
 
 
